@@ -1,0 +1,392 @@
+@import '../../styles/index.scss';
+
+.about-page {
+  min-height: 100vh;
+  padding-top: 6rem;
+  position: relative;
+}
+
+.about-content {
+  position: relative;
+  z-index: 2;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+      "image bio"
+      "connect interests";
+  }
+}
+
+.about-image-container {
+  grid-area: image;
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  
+  @media (min-width: 768px) {
+    height: 400px;
+  }
+}
+
+.about-image {
+  position: relative;
+  width: 100%;
+  height: 240px;
+  overflow: hidden;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba($background-dark, 0.2), rgba($background-dark, 0.1));
+    z-index: 1;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: repeating-linear-gradient(
+        transparent 0px,
+        transparent 2px,
+        rgba($primary-color, 0.05) 3px,
+        rgba($primary-color, 0.05) 4px
+      );
+    }
+  }
+}
+
+.scan-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, $primary-color, transparent);
+  opacity: 0.8;
+  z-index: 2;
+  animation: scanImage 4s linear infinite;
+}
+
+@keyframes scanImage {
+  0% {
+    transform: translateY(1.5rem);
+  }
+  50% {
+    transform: translateY(calc(1.5rem + 240px));
+  }
+  100% {
+    transform: translateY(1.5rem);
+  }
+}
+
+.image-data {
+  .data-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.8rem;
+    
+    .data-label {
+      opacity: 0.7;
+    }
+    
+    .data-value {
+      color: $primary-color;
+    }
+  }
+}
+
+.about-text {
+  grid-area: bio;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  
+  .header-title {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    color: $primary-color;
+    letter-spacing: 1px;
+    margin-right: 1rem;
+  }
+  
+  .header-decoration {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, $primary-color, transparent);
+  }
+}
+
+.panel-content {
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+    font-size: 0.95rem;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  .highlight {
+    color: $primary-color;
+    font-weight: 500;
+  }
+}
+
+.quote-container {
+  margin-top: 2rem;
+  padding-left: 1rem;
+  border-left: 2px solid $primary-color;
+  
+  blockquote {
+    font-style: italic;
+    margin-bottom: 0.5rem;
+  }
+  
+  .quote-author {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    text-align: right;
+  }
+}
+
+.about-connect {
+  grid-area: connect;
+}
+
+.connect-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.connect-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 4px;
+  background: rgba($background-light, 0.3);
+  border: 1px solid rgba($primary-color, 0.2);
+  transition: all 0.3s ease;
+  
+  &:hover {
+    background: rgba($background-light, 0.5);
+    border-color: $primary-color;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.connect-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba($primary-color, 0.2);
+  margin-bottom: 0.5rem;
+  position: relative;
+  
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  &.github::before {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid $primary-color;
+    box-sizing: border-box;
+  }
+  
+  &.github::after {
+    width: 10px;
+    height: 10px;
+    background: $primary-color;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) translateX(5px);
+  }
+  
+  &.linkedin::before {
+    width: 20px;
+    height: 20px;
+    border: 2px solid $primary-color;
+    border-radius: 3px;
+  }
+  
+  &.linkedin::after {
+    width: 10px;
+    height: 10px;
+    background: $primary-color;
+    border-radius: 50%;
+    transform: translate(-50%, -70%);
+  }
+  
+  &.twitter::before {
+    width: 20px;
+    height: 16px;
+    border: 2px solid $primary-color;
+    border-radius: 50%;
+    transform: translate(-50%, -50%) skewX(-10deg);
+  }
+  
+  &.twitter::after {
+    width: 6px;
+    height: 6px;
+    background: $primary-color;
+    border-radius: 50%;
+    transform: translate(-70%, -70%);
+  }
+  
+  &.email::before {
+    width: 20px;
+    height: 16px;
+    border: 2px solid $primary-color;
+    border-radius: 3px;
+  }
+  
+  &.email::after {
+    width: 16px;
+    height: 8px;
+    border-top: 2px solid $primary-color;
+    border-left: 2px solid $primary-color;
+    border-right: 2px solid $primary-color;
+    transform: translate(-50%, -50%) rotate(-45deg) translateY(-4px);
+  }
+}
+
+.connect-text {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.about-interests {
+  grid-area: interests;
+}
+
+.interests-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.interest-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.interest-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba($primary-color, 0.1);
+  border: 1px solid rgba($primary-color, 0.3);
+  margin-bottom: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+  &::before, &::after {
+    content: '';
+    position: absolute;
+  }
+  
+  &.web::before {
+    width: 20px;
+    height: 20px;
+    border: 2px solid $primary-color;
+    border-radius: 50%;
+  }
+  
+  &.web::after {
+    width: 30px;
+    height: 2px;
+    background: $primary-color;
+  }
+  
+  &.ai::before {
+    width: 20px;
+    height: 25px;
+    border: 2px solid $primary-color;
+    border-radius: 5px;
+  }
+  
+  &.ai::after {
+    width: 12px;
+    height: 2px;
+    background: $primary-color;
+    box-shadow: 0 -5px 0 $primary-color, 0 5px 0 $primary-color;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  &.design::before {
+    width: 24px;
+    height: 24px;
+    border: 2px solid $primary-color;
+    transform: rotate(45deg);
+  }
+  
+  &.design::after {
+    width: 10px;
+    height: 10px;
+    background: $primary-color;
+    border-radius: 50%;
+  }
+  
+  &.gaming::before {
+    width: 26px;
+    height: 16px;
+    border: 2px solid $primary-color;
+    border-radius: 3px;
+  }
+  
+  &.gaming::after {
+    width: 6px;
+    height: 6px;
+    background: $primary-color;
+    border-radius: 50%;
+    box-shadow: 10px 0 0 $primary-color;
+  }
+}
+
+.interest-text {
+  font-size: 0.8rem;
+  line-height: 1.3;
+}

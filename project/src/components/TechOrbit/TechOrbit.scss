@@ -1,0 +1,74 @@
+@import '../../styles/index.scss';
+
+.tech-orbit-container {
+  margin-top: 1.5rem;
+  width: 100%;
+  height: 100px;
+  position: relative;
+  
+  @media (min-width: 768px) {
+    height: 110px;
+  }
+}
+
+.tech-orbit {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 50%;
+  border: 1px dashed rgba($primary-color, 0.3);
+}
+
+.tech-item {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  animation: pulse-light 3s infinite;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    z-index: 10;
+    transform: translate(-50%, -50%) scale(1.2) !important;
+    
+    .tech-name {
+      opacity: 1;
+      transform: translateY(-30px) scale(1);
+    }
+  }
+}
+
+.tech-name {
+  position: absolute;
+  background: rgba($background-dark, 0.8);
+  color: $text-primary;
+  font-size: 0.6rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(-20px) scale(0.8);
+  transition: all 0.3s ease;
+  pointer-events: none;
+  font-family: 'Roboto Mono', monospace;
+  z-index: 5;
+}
+
+@keyframes pulse-light {
+  0% {
+    box-shadow: 0 0 5px currentColor;
+  }
+  50% {
+    box-shadow: 0 0 12px currentColor;
+  }
+  100% {
+    box-shadow: 0 0 5px currentColor;
+  }
+}

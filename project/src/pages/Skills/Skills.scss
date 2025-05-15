@@ -1,0 +1,165 @@
+@import '../../styles/index.scss';
+
+.skills-page {
+  min-height: 100vh;
+  padding-top: 6rem;
+  position: relative;
+}
+
+.skills-content {
+  position: relative;
+  z-index: 2;
+}
+
+.category-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  justify-content: center;
+  
+  @media (min-width: 768px) {
+    gap: 2rem;
+  }
+}
+
+.category-button {
+  background: transparent;
+  border: none;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+  color: $text-primary;
+  position: relative;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    color: $primary-color;
+  }
+  
+  &.active {
+    color: $primary-color;
+  }
+  
+  .active-indicator {
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: $primary-color;
+    box-shadow: 0 0 8px $primary-color;
+  }
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.skill-card {
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: $card-glow, 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.skill-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.skill-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-icon-inner {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  opacity: 0.8;
+}
+
+.skill-level-container {
+  position: relative;
+}
+
+.skill-level-bar {
+  height: 8px;
+  background: rgba($text-primary, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.skill-level-fill {
+  height: 100%;
+  border-radius: 4px;
+  width: 0;
+}
+
+.skill-percentage {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.skills-summary {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  padding: 2rem;
+  
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: $primary-color;
+  }
+  
+  p {
+    margin-bottom: 2rem;
+    line-height: 1.7;
+  }
+}
+
+.skill-stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  
+  .stat {
+    text-align: center;
+    
+    .stat-value {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2rem;
+      color: $primary-color;
+      margin-bottom: 0.5rem;
+    }
+    
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.8;
+    }
+  }
+}

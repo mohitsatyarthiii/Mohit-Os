@@ -1,0 +1,31 @@
+@import '../../styles/index.scss';
+
+.projects-page {
+  min-height: 100vh;
+  padding-top: 6rem;
+  position: relative;
+}
+
+.projects-content {
+  position: relative;
+  z-index: 2;
+}
+
+.projects-intro {
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  padding: 1.5rem;
+  text-align: center;
+  
+  p {
+    font-size: 1.1rem;
+    line-height:
+    1.6;
+  }
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}

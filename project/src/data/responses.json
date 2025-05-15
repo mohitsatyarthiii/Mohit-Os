@@ -1,0 +1,62 @@
+{
+  "about me": {
+    "who are you": "I'm Mohit Satyarthi — a full-stack JavaScript developer, MERN specialist, and a passionate tech explorer. I’ve been freelancing for 3+ years, building high-performance web apps, smart business websites, and scalable backend systems.",
+    "tell me about mohit": "Mohit Satyarthi is a national-level footballer turned tech enthusiast. He has a background in commerce from Delhi University and transitioned into full-stack development with deep expertise in JavaScript, React, Node.js, MongoDB, and AWS.",
+    "mohit satyarthi": "That's me! A curious developer who loves turning ideas into beautiful, functional web apps. I'm also an adventurer, traveler, and problem solver who thrives on building solutions that scale."
+  },
+  "web development": {
+    "website development": "I build custom, responsive, and high-performing websites using the latest technologies like React, TailwindCSS, Node.js, and MongoDB. Whether it’s a personal portfolio, a startup site, or a SaaS dashboard — I can help.",
+    "develop a website": "Of course. I can design and develop everything from landing pages to full-scale web applications. Let me know what you’re looking for — branding, features, integrations, and I’ll take it from there.",
+    "how to make a website": "There are multiple steps — from choosing the right stack, wireframing UI, setting up frontend and backend, to deploying it. I follow modern development practices with Git, CI/CD, and cloud-based hosting.",
+    "responsive design": "Yes, all my websites are fully responsive across mobile, tablet, and desktop screens. I use TailwindCSS and Flexbox/Grid systems to make sure the layout adapts perfectly.",
+    "seo optimized website": "Definitely. I ensure that the websites I build follow SEO best practices — meta tags, semantic HTML, fast load times, and mobile-friendliness."
+  },
+  "mern stack": {
+    "mern stack": "The MERN stack stands for MongoDB, Express.js, React.js, and Node.js. It’s a powerful JavaScript-based stack that allows building fast, scalable, full-stack applications.",
+    "what is mern": "MERN is a full-stack solution combining MongoDB (database), Express (server), React (frontend), and Node.js (backend). I use it for most of my client and personal projects.",
+    "mern developer": "As a MERN stack developer, I specialize in creating dynamic, single-page web apps and RESTful APIs. I’ve delivered projects like travel apps, booking platforms, and CRM dashboards using this stack."
+  },
+  "projects": {
+    "your projects": "I've built multiple projects including LocaleLink (a travel planner), AI Avatar Builder (a fun AI SaaS), and e-commerce dashboards. Want me to show you a specific one?",
+    "describe your projects": "Sure. I work on real-world use cases. For example, LocaleLink helps travelers explore cities with real-time recommendations. The AI Avatar Builder allows users to generate custom avatars using AI APIs.",
+    "ai avatar builder": "It’s a creative tool where users can generate lifelike avatars based on prompts. It includes a beautiful frontend, AI integration, secure file handling, and user-friendly UX.",
+    "travel project": "LocaleLink is a smart travel assistant built with the MERN stack. It offers city-wise recommendations, filterable points of interest, user ratings, and even weather-based suggestions."
+  },
+  "services": {
+    "what services do you offer": "I offer full-stack website development, UI/UX design, landing page creation, backend APIs, admin dashboards, web hosting setup, bug fixing, and website optimization.",
+    "your services": "My services include: \n1. Full website design & development \n2. MERN stack app development \n3. UI/UX prototyping \n4. API development \n5. Performance optimization \n6. Tech consultation",
+    "hire you": "Absolutely! Just drop the requirements, and I’ll handle everything from design to deployment. I work with startups, agencies, and solo entrepreneurs."
+  },
+  "tools": {
+    "what tools do you use": "I primarily use VS Code, GitHub, Postman, MongoDB Compass, Figma (for UI), Vercel for deployment, and Notion for project tracking. I also use Framer Motion, TailwindCSS, and React libraries.",
+    "your tech stack": "JavaScript, React, Next.js, Node.js, MongoDB, Express.js, TailwindCSS, AWS (EC2/S3), Vercel, and Git. I also use tools like Stripe for payments, Cloudinary for image management, and Zustand/Redux for state."
+  },
+  "freelancing": {
+    "do you freelance": "Yes, I’m an independent full-stack web developer. I’ve worked with clients from India, US, and Europe — mostly on web apps, landing pages, and custom platforms.",
+    "freelancer experience": "I’ve been freelancing for over 3 years now. I’ve helped businesses build MVPs, redesign their websites, fix bugs, and even build end-to-end platforms with admin panels.",
+    "freelance platforms": "I usually get work via referrals, LinkedIn, and Instagram (@BuiltByMohit). But I’m also on platforms like Upwork and Fiverr for select gigs."
+  },
+  "pricing": {
+    "what's your pricing": "It depends on project complexity. Landing pages start from ₹10,000, full websites from ₹25,000, and dynamic apps (with backend) can range ₹40,000+. I also offer modular hourly plans.",
+    "how much do you charge": "My charges depend on scope. For basic projects, I charge flat rates. For complex apps, I provide phased quotes (UI, dev, backend, integrations). Let's talk and I'll give you an estimate."
+  },
+  "client process": {
+    "how do you work": "I follow a simple 5-step flow: 1) Brief discussion 2) Wireframe/UI 3) Development 4) Testing 5) Launch. I keep you updated at every stage.",
+    "what is your process": "Once we finalize the scope, I start designing UI, set up the codebase, and deploy on staging. After feedback rounds, we move to production. I also offer post-launch support."
+  },
+  "contact": {
+    "how to contact you": "You can reach me via email at mohit.webdev@gmail.com or DM me on Instagram at @BuiltByMohit. I usually reply within a few hours.",
+    "email address": "Sure — my email is mohit.webdev@gmail.com. Feel free to drop your project idea or questions.",
+    "socials": "I'm active on Instagram (@BuiltByMohit) and LinkedIn (Mohit Satyarthi). Follow me to see behind-the-scenes of my projects!"
+  },
+  "testimonials": {
+    "client feedback": "I've received positive feedback for being timely, communicative, and delivering clean, optimized code. Many clients have rehired me for multiple projects.",
+    "are you trustworthy": "Absolutely. My reputation is built on transparency, clear communication, and delivering quality work on time. Client satisfaction is my top priority."
+  },
+  "personal": {
+    "where do you live": "I'm currently based in Noida, but I work with clients globally. Remote collaboration is part of my workflow.",
+    "hobbies": "Apart from coding, I enjoy football, hiking, traveling, and creating digital content. I believe in building things that matter.",
+    "footballer": "Yes, I’m a national-level footballer! Discipline and strategy from sports really help in solving complex development challenges too."
+  },
+  "default": "Hmm, I didn’t catch that clearly. Could you rephrase it or ask about my skills, services, or projects? I'm here to help!"
+}

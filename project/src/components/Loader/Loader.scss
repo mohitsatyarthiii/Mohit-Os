@@ -1,0 +1,173 @@
+@import '../../styles/index.scss';
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: $background-dark;
+  z-index: 9999;
+}
+
+.loader-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 2rem;
+}
+
+.loader-circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: radial-gradient($background-light, $background-dark);
+  box-shadow: 0 0 20px rgba($primary-color, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  &::after {
+    content: '';
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid rgba($primary-color, 0.5);
+    box-shadow: inset 0 0 15px rgba($primary-color, 0.3);
+  }
+}
+
+.rotating-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px dashed $primary-color;
+  animation: rotate 8s linear infinite;
+  
+  &::before, &::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: $primary-color;
+    box-shadow: 0 0 10px $primary-color;
+  }
+  
+  &::before {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  &::after {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.boot-sequence {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.terminal {
+  background: rgba($background-light, 0.5);
+  border: 1px solid rgba($primary-color, 0.4);
+  border-radius: 4px;
+  padding: 1rem;
+  font-family: 'Roboto Mono', monospace;
+  text-align: left;
+  margin-bottom: 1rem;
+  min-height: 200px;
+}
+
+.terminal-line {
+  margin-bottom: 0.5rem;
+  opacity: 0.8;
+  font-size: 0.9rem;
+  
+  &.active {
+    color: $text-primary;
+    opacity: 1;
+  }
+}
+
+.terminal-prompt {
+  color: $primary-color;
+  margin-right: 0.5rem;
+}
+
+.loading-bar-container {
+  height: 4px;
+  background: rgba($text-primary, 0.1);
+  border-radius: 2px;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.loading-bar {
+  height: 100%;
+  background: linear-gradient(90deg, $primary-color, $secondary-color);
+  border-radius: 2px;
+  width: 0;
+  transition: width 0.2s ease;
+}
+
+.loading-percentage {
+  position: absolute;
+  top: -22px;
+  right: 0;
+  font-size: 0.8rem;
+  font-family: 'Roboto Mono', monospace;
+  color: $primary-color;
+}
+
+.loader-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  
+  .accent {
+    color: $primary-color;
+  }
+  
+  .version {
+    font-size: 1rem;
+    vertical-align: super;
+    opacity: 0.7;
+    margin-left: 0.25rem;
+  }
+}
