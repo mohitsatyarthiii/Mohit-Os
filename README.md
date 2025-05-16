@@ -35,8 +35,8 @@ npm install
 
 🌐 Live Demo
 🚀 https://mohitsatyarthii.netlify.app
-📫 Contact
-Feel free to connect with me:
+
+📫 Contact Feel free to connect with me:
 
 Email: mohitsatyarthi11@gmail.com
 
