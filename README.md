@@ -34,8 +34,7 @@ npm install
 
 
 🌐 Live Demo
-🚀 https://github.com/mohitsatyarthiii/Mohit-os
-
+🚀 https://mohitsatyarthii.netlify.app
 📫 Contact
 Feel free to connect with me:
 
@@ -43,7 +42,7 @@ Email: mohitsatyarthi11@gmail.com
 
 LinkedIn: https://linkedin.com/in/mohitsatyarthii
 
-GitHub: @yourusername
+GitHub: @mohitsatyarthiii
 
 ⭐ Credits
 Inspired by Jarvis (Iron Man's AI assistant)
