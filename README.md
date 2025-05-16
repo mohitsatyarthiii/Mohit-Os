@@ -29,8 +29,9 @@
 - 🌙 Dark theme with vibrant neon glow effects
 
 ---
-cd client
-npm install
+      Commands for terminal :
+      cd client
+      npm install
 
 
 🌐 Live Demo
@@ -42,7 +43,7 @@ Email: mohitsatyarthi11@gmail.com
 
 LinkedIn: https://linkedin.com/in/mohitsatyarthii
 
-GitHub: @mohitsatyarthiii
+GitHub: https://github.com/mohitsatyarthii/Mohit-os
 
 ⭐ Credits
 Inspired by Jarvis (Iron Man's AI assistant)
